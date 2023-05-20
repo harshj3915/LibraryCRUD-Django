@@ -43,5 +43,5 @@ def BookDetail(request,book_Id):
         return Response(serializer.error_messages,status=status.HTTP_304_NOT_MODIFIED)
     elif request.method == 'DELETE':
         book.delete()
-        return Response(status=status.HTTP_410_GONE)
+        return Response(status=status.HTTP_200_OK)
     
